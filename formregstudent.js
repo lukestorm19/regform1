@@ -77,6 +77,13 @@ $('#messagepwd').html('<span class="error"><em>Please Your Password should be gr
                 e.preventDefault();
     }
 
+        if ($('#pwd').val() != $('#cpwd').val()) {
+          $("#cpwd").css("border-color", "red").css("background-color","#ea907a");
+              $('#messagecpwd').html('Your passwords dont match').css('color', 'red');
+
+            e.preventDefault();
+        }
+
 
     if (cfmpassword.length == 0) {
       $("#cpwd").css("border-color", "red").css("background-color","#ea907a");
